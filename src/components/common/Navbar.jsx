@@ -155,7 +155,7 @@ function Navbar() {
         {/* mobile Menu */}
         <Modal open={openFirst} onClose={() => setOpenFirst(false)} top classNames={{modal: 'customModal'}}>
           <div className="bg-text-800">
-            <ul className="flex flex-col gap-x-6 text-richblack-25">
+            <ul className="flex flex-col gap-x-6 text-lg font-semibold gap-2 text-richblack-25">
               {NavbarLinks.map((link, index) => (
                 <li key={index}>
                   {link.title === "Catalog" ? (
@@ -172,7 +172,7 @@ function Navbar() {
                         <Modal open={openSecond} onClose={() => setOpenSecond(false)} top classNames={{modal: 'customModal'}} >
                               
                         {loading ? (
-                          <div className="loader"></div>
+                          <div className="">Loading...</div>
                         ) : subLinks.length ? (
                           <>
                             {subLinks
@@ -185,7 +185,7 @@ function Navbar() {
                                     .split(" ")
                                     .join("-")
                                     .toLowerCase()}`}
-                                  className="rounded-lg bg-transparent py-4 pl-4 hover:bg-richblack-50"
+                                  className="rounded-lg bg-transparent py-4 pl-4 lg:hover:bg-richblack-50"
                                   key={i}
                                 >
                                   <p>{subLink.name}</p>
