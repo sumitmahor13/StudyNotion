@@ -26,8 +26,8 @@ export default function Sidebar() {
   }
 
   return (
-    <div className="text-richblack-200">
-      <div className=" absolute flex lg:h-[calc(100vh-3.5rem)] lg:min-w-[220px] w-[0px] lg:w-[100px] flex-col border-r-[1px] border-r-richblack-700 bg-richblack-800 py-10">
+    <div className="relative text-richblack-200">
+      <div className=" bg-richblack-800 flex lg:h-[calc(100vh-3.5rem)] lg:min-w-[220px] w-[0px] lg:w-[100px] flex-col border-r-[1px] border-r-richblack-700 bg-richblack-0 py-3 lg:py-10">
         <div className="flex flex-row lg:flex-col bg-richblack-800">
           {sidebarLinks.map((link) => {
             if (link.type && user?.accountType !== link.type) return null
@@ -36,7 +36,7 @@ export default function Sidebar() {
             )
           })}
         </div>
-        <div className="mx-auto mt-6 mb-6 h-[1px] w-10/12 bg-richblack-700" />
+        <div className="hidden lg:flex mx-auto mt-6 mb-6 h-[1px] w-10/12 bg-richblack-700" />
         <div className="flex flex-row lg:flex-col">
           <SidebarLink
             link={{ name: "Settings", path: "/dashboard/settings" }}

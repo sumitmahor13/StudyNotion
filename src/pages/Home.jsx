@@ -197,7 +197,7 @@ const Home = () => {
         <div className='w-10/12 max-w-maxContent mx-auto flex flex-col justify-center items-center mt-16 mb-16 text-white bg-richblack-900 '>
             <div className='flex flex-col lg:flex-row gap-20'>
                 <div className='w-[100%] lg:w-[50%]'>
-                    <img src={InstructorImage} className='shadow-[-20px_-20px_0px_0px_rgba(255,255,255)]'/>
+                    <img src={InstructorImage} className=' shadow-[-10px_-10px_0px_0px_rgba(255,255,255)] lg:shadow-[-20px_-20px_0px_0px_rgba(255,255,255)]'/>
                 </div>
                 <div className='w-[100%] lg:w-[50%] flex flex-col gap-10 justify-center'>
                     <div className='text-4xl w-[100%] lg:w-[50%] font-bold'>Become an<span className='bg-gradient-to-r from-blue-100 to-blue-500 bg-clip-text text-transparent'> instructor</span></div>

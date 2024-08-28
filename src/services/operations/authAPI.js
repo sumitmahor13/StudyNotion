@@ -70,7 +70,7 @@ export function signUp(
       if (!response.data.success) {
         throw new Error(response.data.message)
       }
-      toast.success("Signup Successful")
+      toast.success("Signup Successfully")
       navigate("/login")
     } catch (error) {
       console.log("SIGNUP API ERROR............", error)
@@ -98,7 +98,7 @@ export function login(email, password, navigate) {
         throw new Error(response.data.message)
       }
 
-      toast.success("Login Successful")
+      toast.success("Login Successfully")
       dispatch(setToken(response.data.token))
       const userImage = response.data?.user?.image
         ? response.data.user.image
@@ -109,7 +109,7 @@ export function login(email, password, navigate) {
       navigate("/dashboard/my-profile")
     } catch (error) {
       console.log("LOGIN API ERROR............", error)
-      toast.error("Login Failed")
+      toast.error("Incorrect Password")
     }
     dispatch(setLoading(false))
     toast.dismiss(toastId)
@@ -135,7 +135,7 @@ export function getPasswordResetToken(email, setEmailSent) {
       setEmailSent(true)
     } catch (error) {
       console.log("RESETPASSTOKEN ERROR............", error)
-      toast.error("Failed To Send Reset Email")
+      toast.error("You are not registred user")
     }
     toast.dismiss(toastId)
     dispatch(setLoading(false))

@@ -153,7 +153,7 @@ function Navbar() {
         </button>
 
         {/* mobile Menu */}
-        <Modal open={openFirst} onClose={() => setOpenFirst(false)} top classNames={{modal: 'customModal'}}>
+        <Modal open={openFirst} onClose={() => setOpenFirst(false)} top showCloseIcon={false} classNames={{modal: 'customModal'}}>
           <div className="bg-text-800">
             <ul className="flex flex-col gap-x-6 text-lg font-semibold gap-2 text-richblack-25">
               {NavbarLinks.map((link, index) => (
@@ -188,7 +188,7 @@ function Navbar() {
                                   className="rounded-lg bg-transparent py-4 pl-4 lg:hover:bg-richblack-50"
                                   key={i}
                                 >
-                                  <p>{subLink.name}</p>
+                                  <p onClick={()=> setOpenFirst(false)}>{subLink.name}</p>
                                 </Link>
                               ))}
                           </>
@@ -202,6 +202,7 @@ function Navbar() {
                   ) : (
                     <Link to={link?.path}>
                       <p
+                        onClick={()=> setOpenFirst(false)}
                         className={`${
                           matchRoute(link?.path)
                             ? "text-yellow-100"
@@ -216,6 +217,33 @@ function Navbar() {
               ))}
             </ul>
           </div>
+          <div className="items-center gap-x-4 flex mt-5">
+          {user && user?.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
+            <Link to="/dashboard/cart" className="relative">
+              <AiOutlineShoppingCart onClick={()=> setOpenFirst(false)} className="text-2xl text-richblack-600" />
+              {totalItems > 0 && (
+                <span className="absolute -bottom-2 -right-2 grid h-5 w-5 place-items-center overflow-hidden rounded-full bg-richblack-600 text-center text-xs font-bold text-yellow-100">
+                  {totalItems}
+                </span>
+              )}
+            </Link>
+          )}
+          {token === null && (
+            <Link to="/login">
+              <button onClick={()=> setOpenFirst(false)} className="rounded-[6px] font-semibold bg-richblack-50 px-[16px] py-[8px] text-richblack-900">
+                Log in
+              </button>
+            </Link>
+          )}
+          {token === null && (
+            <Link to="/signup">
+              <button onClick={()=> setOpenFirst(false)} className="rounded-[6px] font-semibold bg-yellow-50 px-[16px] py-[8px] text-richblack-900">
+                Sign up
+              </button>
+            </Link>
+          )}
+          {token !== null && <ProfileDropdown setOpenFirst={setOpenFirst} />}
+        </div>
       </Modal>
       </div>
     </div>

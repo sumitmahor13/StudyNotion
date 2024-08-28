@@ -54,7 +54,7 @@ const TimeLineSection = () => {
         </div>
 
             <div className='bg-white relative mb-10 shadow-[0px_0px_30px_6px_rgba(8,_112,_184,_0.7)]'>
-                <img src={TimeLineImage} alt='TimeLine Image' className=' w-[40rem] h-fit relative shadow-white shadow-[20px_20px_0px_0px_rgba(255,255,255)]'/>
+                <img src={TimeLineImage} alt='TimeLine Image' className=' w-[40rem] h-fit relative shadow-white shadow-[10px_10px_0px_0px_rgba(255,255,255)] lg:shadow-[20px_20px_0px_0px_rgba(255,255,255)]'/>
                 <div className='absolute h-10 gap-5 lg:gap-0  left-[5%] right-[5%] -bottom-10 bg-caribbeangreen-700 flex uppercase text-white py-10 px-5 lg:px-10'>  
                     <div className='flex mx-auto gap-3 lg:gap-10 items-center border-r border-caribbeangreen-300 lg:px-7'>
                         <p className=' text-md lg:text-3xl font-bold'>10</p>
