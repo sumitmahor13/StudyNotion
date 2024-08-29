@@ -381,7 +381,7 @@ export const createRating = async (data, token) => {
   } catch (error) {
     success = false
     console.log("CREATE RATING API ERROR............", error)
-    toast.error(error.message)
+    toast.error("You have already rated this course!")
   }
   toast.dismiss(toastId)
   return success

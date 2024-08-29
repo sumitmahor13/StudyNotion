@@ -73,7 +73,7 @@ export default function Sidebar() {
       {confirmationModal && <ConfirmationModal modalData={confirmationModal} />}
 
 {/* Mobile Menu  */}
-      <button onClick={onOpenModal} className="fixed border border-richblack-500 bg-richblack-600 z-[1000] rounded-full p-2 lg:hidden left-[18rem] bottom-14">
+      <button onClick={onOpenModal} className="fixed border border-richblack-500 bg-richblack-600 z-[1000] rounded-full p-2 lg:hidden left-[18rem] bottom-10">
           <TbLayoutDashboardFilled className="text-3xl" />
       </button>
       <Modal open={open} onClose={onCloseModal} closeIcon={true} classNames={{modal: 'dashboardModal'}} top >
