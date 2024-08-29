@@ -1,7 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table"
-
-import { setCourse, setEditCourse } from "../../../../slices/courseSlice"
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 import { useState } from "react"
 import { FaCheck } from "react-icons/fa"
@@ -11,10 +9,7 @@ import { RiDeleteBin6Line } from "react-icons/ri"
 import { useNavigate } from "react-router-dom"
 
 import { formatDate } from "../../../../services/formatDate"
-import {
-  deleteCourse,
-  fetchInstructorCourses,
-} from "../../../../services/operations/courseDetailsAPI"
+import {deleteCourse,fetchInstructorCourses} from "../../../../services/operations/courseDetailsAPI"
 import { COURSE_STATUS } from "../../../../utils/constants"
 import ConfirmationModal from "../../../common/ConfirmationModal"
 
@@ -37,13 +32,11 @@ export default function CoursesTable({ courses, setCourses }) {
     setLoading(false)
   }
 
-  // console.log("All Course ", courses)
-
   return (
     <>
       <Table className="rounded-xl border border-richblack-800 ">
-        <Thead>
-          <Tr className="flex gap-x-10 rounded-t-md border-b border-b-richblack-800 px-6 py-2">
+        <Thead className="">
+          <Tr className="flex gap-x-10 rounded-t-md border-b border-b-richblack-800 lg:px-6 py-2">
             <Th className="flex-1 text-left text-sm font-medium uppercase text-richblack-100">
               Courses
             </Th>
@@ -76,7 +69,7 @@ export default function CoursesTable({ courses, setCourses }) {
                   <img
                     src={course?.thumbnail}
                     alt={course?.courseName}
-                    className="h-[148px] w-[250px] rounded-lg object-cover"
+                    className="lg:h-[148px] lg:w-[250px] rounded-lg object-cover"
                   />
                   <div className="flex flex-col justify-between">
                     <p className="text-lg font-semibold text-richblack-5">
@@ -131,8 +124,7 @@ export default function CoursesTable({ courses, setCourses }) {
                     onClick={() => {
                       setConfirmationModal({
                         text1: "Do you want to delete this course?",
-                        text2:
-                          "All the data related to this course will be deleted",
+                        text2: "All the data related to this course will be deleted",
                         btn1Text: !loading ? "Delete" : "Loading...  ",
                         btn2Text: "Cancel",
                         btn1Handler: !loading

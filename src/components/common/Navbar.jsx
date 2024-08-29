@@ -3,14 +3,12 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineShoppingCart } from "react-icon
 import { BsChevronDown } from "react-icons/bs"
 import { useSelector } from "react-redux"
 import { Link, matchPath, useLocation } from "react-router-dom"
-
 import logo from "../../assets/Logo/Logo-Full-Light.png"
 import { NavbarLinks } from "../../data/navbar-links"
 import { apiConnector } from "../../services/apiConnector"
 import { categories } from "../../services/api"
 import { ACCOUNT_TYPE } from "../../utils/constants"
 import ProfileDropdown from "../core/Auth/ProfileDropDown"
-
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 
@@ -230,7 +228,7 @@ function Navbar() {
           )}
           {token === null && (
             <Link to="/login">
-              <button onClick={()=> setOpenFirst(false)} className="rounded-[6px] font-semibold bg-richblack-50 px-[16px] py-[8px] text-richblack-900">
+              <button onClick={()=> setOpenFirst(false)} className="rounded-[6px] font-semibold bg-richblack-700 px-[16px] py-[8px] text-white">
                 Log in
               </button>
             </Link>

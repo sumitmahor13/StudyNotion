@@ -46,9 +46,9 @@ const Instructor = () => {
       :courses.length > 0 
         ? (<div>
             <div>
-            <div className="my-4 flex h-[450px] space-x-4">
+            <div className="my-4 flex lg:flex-row flex-col h-[450px] gap-x-4">
                 <InstructorChart  courses={instructorData}/>
-                <div className="flex-1 rounded-md bg-richblack-800 p-6">
+                <div className="flex-1 rounded-md mt-4 lg:mt-0 bg-richblack-800 p-6">
                     <p className="text-lg font-bold text-richblack-5">Statistics</p>
                     <div className="mt-4 space-y-4">
                         <p className="text-lg text-richblack-200">Total Courses</p>
@@ -67,7 +67,7 @@ const Instructor = () => {
                 </div>
             </div>
         </div>
-        <div className="rounded-md bg-richblack-800 p-6">
+        <div className="rounded-md bg-richblack-800 mt-[26.5rem] lg:mt-0 p-6">
             {/* Render 3 courses */}
             <div className="flex items-center justify-between">
                 <p className="text-lg font-bold text-richblack-5">Your Courses</p>
@@ -75,14 +75,14 @@ const Instructor = () => {
                     <p className="text-xs font-semibold text-yellow-50">View all</p>
                 </Link>
             </div>
-            <div className="my-4 flex lg:flex-row flex-col items-start space-x-6">
+            <div className="my-4 flex lg:flex-row flex-col items-start gap-6">
                 {
                     courses.slice(0,3).map((course)=> (
-                        <div key={course._id} className="w-1/3">
+                        <div key={course._id} className="lg:w-1/3">
                             <img 
                                 src={course.thumbnail}
                                 alt={course.courseName}
-                                className="h-[201px] w-full rounded-md object-cover"
+                                className="h-[180px] w-full rounded-md object-cover"
                             />
                             <div className="mt-3 w-full">
                                 <p className="text-sm font-medium text-richblack-50">{course.courseName}</p>

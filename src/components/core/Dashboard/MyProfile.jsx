@@ -11,7 +11,7 @@ export default function MyProfile() {
 
   return (
     <>
-      <h1 className="lg:mb-14 mb-2 text-2xl lg:text-3xl mt-[4rem] lg:mt-0 font-medium text-richblack-5">
+      <h1 className="lg:mb-14 mb-4 text-2xl lg:text-3xl font-semibold text-richblack-5">
         My Profile
       </h1>
       <div className="flex items-center justify-between rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-4 lg:p-8 lg:px-12 px-3">
@@ -21,11 +21,11 @@ export default function MyProfile() {
             alt={`profile-${user.firstName}`}
             className="aspect-square w-[40px] lg:w-[78px] rounded-full object-cover"
           />
-          <div className="space-y-1">
+          <div className="">
             <p className="lg:text-lg text-md font-semibold text-richblack-5">
               {user?.firstName + " " + user?.lastName}
             </p>
-            <p className="text-xs lg:text-sm text-richblack-300">{user?.email}</p>
+            <p className="text-[10px] lg:text-sm text-richblack-300">{user?.email}</p>
           </div>
         </div>
         <IconBtn
@@ -37,7 +37,7 @@ export default function MyProfile() {
           <RiEditBoxLine />
         </IconBtn>
       </div>
-      <div className="my-2 lg:my-10 flex flex-col gap-y-2 lg:gap-y-5 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-4 lg:p-8 px-3 lg:px-12">
+      <div className="my-4 lg:my-10 flex flex-col gap-y-2 lg:gap-y-5 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-4 lg:p-8 px-3 lg:px-12">
         <div className="flex w-full justify-between">
           <p className="text-md lg:text-lg font-semibold text-richblack-5">About</p>
           <IconBtn
@@ -73,7 +73,7 @@ export default function MyProfile() {
             <RiEditBoxLine />
           </IconBtn>
         </div>
-        <div className="flex max-w-[500px] justify-between">
+        <div className="flex flex-col lg:flex-row max-w-[500px] justify-between">
           <div className="flex flex-col gap-y-2 lg:gap-y-5">
             <div>
               <p className="mb-2 text-sm font-bold text-richblack-600">First Name</p>

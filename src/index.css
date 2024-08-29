@@ -4,10 +4,22 @@
 
 
 .customModal{
-    background-color: white;
-    width: 255px;
+    background-color: #F1F2FF;
+    width: 222px;
     top: 3rem;
+    left: 4rem;
     color: black;
     border: 1px solid gray;
-    border-radius: 0.5rem;
+    border-radius: 0.7rem;
 } 
+
+.dashboardModal{
+    background-color: #F1F2FF;
+    width: 200px;
+    top: 3rem;
+    left: 4.8rem;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 0.7rem;
+    padding: 1px;
+}

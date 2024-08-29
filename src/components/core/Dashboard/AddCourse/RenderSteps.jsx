@@ -26,7 +26,7 @@ export default function RenderSteps() {
 
   return (
     <>
-      <div className="relative mb-2 flex w-full justify-center">
+      <div className="relative mb-2 flex lg:w-full w-[88.5%] justify-center">
         {steps.map((item) => (
           <>
             <div
@@ -70,7 +70,7 @@ export default function RenderSteps() {
             >
               
               <p
-                className={`text-sm ${
+                className={`lg:text-sm text-xs ${
                   step >= item.id ? "text-richblack-5" : "text-richblack-500"
                 }`}
               >
