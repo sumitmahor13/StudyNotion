@@ -25,7 +25,7 @@ export default function EnrolledCourses() {
 
   return (
     <>
-      <div className="lg:mb-14 mb-2 text-2xl lg:text-3xl mt-[4rem] lg:mt-0 font-medium text-richblack-5">Enrolled Courses</div>
+      <div className="lg:mb-14 mb-2 text-2xl lg:text-3xl font-medium text-richblack-5">Enrolled Courses</div>
       {!enrolledCourses ? (
         <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
           <div className="loader -mt-72 "></div>
