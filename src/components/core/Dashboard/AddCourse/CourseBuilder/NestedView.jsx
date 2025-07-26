@@ -22,16 +22,16 @@ const NestedView = ({handleChangeEditSectionName}) => {
     const [editSubSection, setEditSubSection] = useState(null);
 
     const [confirmationModal, setConfirmationModal] = useState(null);
-    useEffect(() => {
-        console.log("REndering it again");
-    });
+    // useEffect(() => {
+    //     console.log("REndering it again");
+    // });
     const handleDeleteSection = async (sectionId) => {
         const result = await deleteSection({
             sectionId,
             courseId: course._id},
             token
         );
-        console.log("PRINTING AFTER DELETE SECTIOn", result);
+
         if(result) {
             dispatch(setCourse(result))
         }

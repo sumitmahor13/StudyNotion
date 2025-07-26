@@ -23,7 +23,7 @@ exports.resetPasswordToken = async (req, res) => {
 			},
 			{ new: true }
 		);
-		console.log("DETAILS", updatedDetails);
+
 
 		const url = `https://studynotion-backend-gs04.onrender.com/update-password/${token}`;
 

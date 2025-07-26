@@ -12,7 +12,7 @@ const ContactUsForm = () => {
     } = useForm();
 
     const submitContactForm = async(data) => {
-        console.log("Form Data:", data)
+
     }
 
     useEffect(()=>{

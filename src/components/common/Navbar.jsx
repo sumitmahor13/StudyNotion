@@ -39,7 +39,7 @@ function Navbar() {
     })()
   }, [])
 
-  // console.log("sub links", subLinks)
+
 
   const matchRoute = (route) => {
     return matchPath({ path: route }, location.pathname)

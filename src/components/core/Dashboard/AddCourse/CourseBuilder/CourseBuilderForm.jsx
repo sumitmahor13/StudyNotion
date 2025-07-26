@@ -21,7 +21,7 @@ const CourseBuilderForm = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    console.log("UPDATED");
+
   }, [course])
 
 
